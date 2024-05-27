@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="pro2.css">
+</head>
+<body>
+    <header>
+        <h1>Interest Calculator</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Calculate Interest</h2>
+            <form id="interest-form">
+                <div>
+                    <label for="principal">Principal Amount :</label>
+                    <input type="number" id="principal" name="principal" required>
+                </div>
+                <div>
+                    <label for="rate">Interest Rate (%):</label>
+                    <input type="number" id="rate" name="rate" step="0.01" required>
+                    <select id="rate-type" name="rate-type" required>
+                        <option value="annual">Annual</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                </div>
+                <div>
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" name="end-date" required>
+                </div>
+                <div>
+                    <label for="interest-type">Interest Type:</label>
+                    <select id="interest-type" name="interest-type" required>
+                        <option value="simple">Simple Interest</option>
+                        <option value="compound">Compound Interest</option>
+                    </select>
+                </div>
+                <div id="compound-frequency-div" style="display: none;">
+                    <label for="compound-frequency">Compound Frequency:</label>
+                    <select id="compound-frequency" name="compound-frequency">
+                        <option value="annually">Annually</option>
+                        <option value="semiannually">Semiannually</option>
+                        <option value="quarterly">Quarterly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="daily">Daily</option>
+                    </select>
+                </div>
+                <button type="button" onclick="calculateInterest()">Calculate</button>
+            </form>
+            <div id="result">
+                <!-- Result will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Interest Calculator. All rights reserved.</p>
+    </footer>
+    <script src="pro3.js"></script>
+</body>
+</html>
