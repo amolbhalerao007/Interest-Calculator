@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const interestTypeSelect = document.getElementById("interest-type");
     const compoundFrequencyDiv = document.getElementById("compound-frequency-div");
 
-    
+    // Show/Hide compound frequency options based on interest type
     interestTypeSelect.addEventListener("change", () => {
         if (interestTypeSelect.value === "compound") {
             compoundFrequencyDiv.style.display = "block";
